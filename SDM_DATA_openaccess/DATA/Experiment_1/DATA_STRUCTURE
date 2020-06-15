@@ -1,17 +1,12 @@
 DATA_STRUCTURE for each subject:
 
 for each subject, the folder contains the following files:
-  (1) choice_subject_1_cate_1.mat - subject 1 choice data for category 1 stimuli (vegitables and fruits)
-  (2) choice_subject_1_cate_2.mat - subject 1 choice data for category 2 stimuli (snacks)
-  (3) choice_subject_1_cate_3.mat - subject 1 choice data for category 3 stimuli (music)
-  (4) choice_subject_1_cate_4.mat - subject 1 choice data for category 4 stimuli (readings)
-  (5) choice_subject_1_cate_5.mat - subject 1 choice data for category 5 stimul (films)
-  (6) choice_subject_1_cate_15.mat - subject 1 choice data for stimuli from all categories together
-  (7)
-  (8)
-  (9) 
-  
-  In each choice data file ((1) to (6)): 
+%%% 
+choice data, consist of the following file name: choice_subject_%d1_cate_%d2.mat
+d1: subject number
+d2: 1 = vegitables and fruit, 2 = snacks, 3 = music, 4 = readings, 5 = films, 15 = all categories together 
+
+  In each choice data file : 
     per row = per trial
     per column:
       column 1 = subid(which subject)
@@ -56,4 +51,12 @@ for each subject, the folder contains the following files:
       column 40 = response_time (the response time, calculated as the response cue offset to the choice response onset) 
       column 41 = confidence (confidence reporting for that trial, from 0 to 100)
 
-  In each choice data file ((1) to (6)): 
+%%% 
+rating data for each item, consist of the following file name: pleasantRating_1_subject_%d1_cate_%d2.mat
+d1: subject number
+d2: 1 = vegitables and fruit, 2 = snacks, 3 = music, 4 = readings, 5 = films, 15 = all categories together 
+
+      variable n, 1*86 array consisting the index of the 86 items
+       varaible ratingItem, 1*86 array consisting the rating of the 86 items (from 0 to 100)
+
+
