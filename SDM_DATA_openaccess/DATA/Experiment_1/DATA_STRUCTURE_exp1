@@ -52,7 +52,7 @@ d2: 1 = vegitables and fruit, 2 = snacks, 3 = music, 4 = readings, 5 = films, 15
       column 41 = confidence (confidence reporting for that trial, from 0 to 100)
 
 %%% 
-rating data for each item, consist of the following file name: pleasantRating_1_subject_%d1_cate_%d2.mat
+rating data for each item, consist of the following file name: pleasantRating_subject_%d1_cate_%d2.mat
 d1: subject number
 d2: 1 = vegitables and fruit, 2 = snacks, 3 = music, 4 = readings, 5 = films, 15 = all categories together 
 
