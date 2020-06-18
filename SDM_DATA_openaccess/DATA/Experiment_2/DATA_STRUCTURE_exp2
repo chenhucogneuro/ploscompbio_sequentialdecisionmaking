@@ -1,0 +1,98 @@
+DATA_STRUCTURE for each subject:
+
+for each subject, the folder contains the following files:
+%%% 
+choice data, consist of the following file name: choice_subject_%d1_cate_%d2.mat
+d1: subject number
+d2: 2 = snacks, 3 = music, 5 = films, 235 = all three categories together 
+
+  In each choice data file : 
+    per row = per trial
+    per column:
+      column 1 = subid(which subject)
+      column 2 = cateid(which category)
+      column 3 = repeatid(how many time the same stimuli have been repeated)
+      column 4 = orderid (the order of the category appears in the test sequence)
+      column 5 = trialid (which trial is this trial)
+      column 6 = number_item (how many item in the trial)
+      column 7 = highestItem_whichorder (where does the best item appear,temporally)
+      column 8 = highestItemSec_whichorder (where does the 2nd best item appear,temporally)
+      column 9 =  value_rank_item1 (in which order item 1 is ranked, one to six)
+      column 10 = value_rank_item2 (in which order item 2 is ranked, one to six)
+      column 11 = value_rank_item3 (in which order item 3 is ranked, one to six)
+      column 12 = value_rank_item4 (in which order item 4 is ranked, one to six, NaN if sequance is shorter than 4)
+      column 13 = value_rank_item5 (in which order item 5 is ranked, one to six, NaN if sequance is shorter than 5)
+      column 14 = value_rank_item6 (in which order item 6 is ranked, one to six, NaN if sequance is shorter than 6)
+      column 15 = value_item1 (the rating of item 1)
+      column 16 = value_item2 (the rating of item 2)
+      column 17 = value_item3 (the rating of item 3)
+      column 18 = value_item4 (the rating of item 4, NaN if sequance is shorter than 4)
+      column 19 = value_item5 (the rating of item 5, NaN if sequance is shorter than 5)
+      column 20 = value_item6 (the rating of item 6, NaN if sequance is shorter than 6)
+      column 21 = which_item1 (item 1 ID)
+      column 22 = which_item2 (item 2 ID)
+      column 23 = which_item3 (item 3 ID)
+      column 24 = which_item4 (item 4 ID, NaN if sequance is shorter than 4)
+      column 25 = which_item5 (item 5 ID, NaN if sequance is shorter than 5)
+      column 26 = which_item6 (item 6 ID, NaN if sequance is shorter than 6)
+      column 27 = location_item1 (which one of the 6 location on the screen located item 1)
+      column 28 = location_item2 (which one of the 6 location on the screen located item 2)
+      column 29 = location_item3 (which one of the 6 location on the screen located item 3)
+      column 30 = location_item4 (which one of the 6 location on the screen located item 4, NaN if sequance is shorter than 4)
+      column 31 = location_item5 (which one of the 6 location on the screen located item 5, NaN if sequance is shorter than 5)
+      column 32 = location_item6 (which one of the 6 location on the screen located item 6, NaN if sequance is shorter than 6)
+      column 33 = viewing_time1 （the browsing time of item 1)
+      column 34 = viewing_time2 （the browsing time of item 2)
+      column 35 = viewing_time3 （the browsing time of item 3)
+      column 36 = viewing_time4 （the browsing time of item 4, NaN if sequance is shorter than 4)
+      column 37 = viewing_time5 （the browsing time of item 5, NaN if sequance is shorter than 5)
+      column 38 = viewing_time6 （the browsing time of item 6, NaN if sequance is shorter than 6)
+      column 39 = choice (which option did subject choose in the end)
+      column 40 = response_time (the response time, calculated as the response cue offset to the choice response onset) 
+      column 41 = confidence (confidence reporting for that trial, from 0 to 100)
+      column 42 = the horizental position of the chosen item on the screen
+      column 43 = the vertical position of the chosen item on the screen
+      column 44 = the distance of the position between the second best item and the best item (2nd - best)
+      column 45 = ranking of the first item
+      column 46 = ranking of the second item
+      column 47 = ranking of the third item
+      column 48 = ranking of the fourth item
+      column 49 = ranking of the fifth item
+      column 50 = ranking of the sixth item
+      column 51 = transfer category 2,3,5 into 1,2,3
+      
+      clicks_alltrials: variable that contains 1*84 cell, describing how the subject click the items during choice phase on the touchscreen
+      each cell contains:
+      (1) (2) the clicking patterns (in terms of x,y location on the scree) after choice cue offset
+      (3) the time of the click
+      (4) which option does each click corresponds to
+      
+
+%%% 
+likability rating data for each item, consist of the following file name: 
+(1) pleasantRating_1_subject_%d1_cate_%d2.mat: first rating round before choice
+(2) pleasantRating_2_subject_%d1_cate_%d2.mat: second rating round after choice
+d1: subject number
+d2: 2 = snacks, 3 = music, 5 = films, 235 = all three categories together
+Each of the .mat file contains two structures: rating and tm
+  rating.orginalpos = the starting position of the cursor (1*60items)
+  rating.scoreFinal = the final rating of the item (1*60items)
+  rating.orderItem = items rating as shown order is randomized, 
+  rating.permorder = the order of the permutation
+  rating.compound = minus rating + response time in seconds (used to rank the items)
+  rating.sort_compound = the sorted rating.compound in the order of higher rating + quicker response time
+  rating.index_compound = the sorting index
+  
+  tm.cross_start = at the beginning of the trial, the fixation cross onset time
+  tm.cross_end = the fixation cross offset time
+  tm.response = response time from fixation offset to response confirmation
+  tm.orderitem = response time organized according to the order of the items
+
+%% for some subjects, we also tested the familiarity to different items:
+familiarity_Rating_subject_%d1_cate_%d2.mat
+d1: subject number
+d2: 2 = snacks, 3 = music, 5 = films
+
+
+
+    
