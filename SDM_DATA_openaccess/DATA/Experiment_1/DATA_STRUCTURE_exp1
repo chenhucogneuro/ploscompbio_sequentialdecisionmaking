@@ -50,7 +50,8 @@ d2: 1 = vegitables and fruit, 2 = snacks, 3 = music, 4 = readings, 5 = films, 15
       column 39 = choice (which option did subject choose in the end)
       column 40 = response_time (the response time, calculated as the response cue offset to the choice response onset) 
       column 41 = confidence (confidence reporting for that trial, from 0 to 100)
-
+      column 42 = the horizental position of the chosen item on the screen
+      column 43 = the vertical position of the chosen item on the screen
 %%% 
 rating data for each item, consist of the following file name: pleasantRating_subject_%d1_cate_%d2.mat
 d1: subject number
